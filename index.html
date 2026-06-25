@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gold & Blade Salon & Barbershop | Luxury Hair Styling & Precision Grooming</title>
+    <meta name="description" content="Experience premium styling, custom fades, royal hot towel shaves, and luxury hair coloring at Gold & Blade. Book your appointment online." />
+
+    <!-- Preconnect so fonts + images start loading before JS runs -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="dns-prefetch" href="https://images.unsplash.com" />
+
+    <!-- Fonts: async (non-blocking) via media="print" swap -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    </noscript>
+
+    <!-- Preload hero image at correct responsive size -->
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?fm=webp&fit=crop&q=80&w=1200"
+      imagesrcset="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?fm=webp&fit=crop&q=80&w=768 768w, https://images.unsplash.com/photo-1503951914875-452162b0f3f1?fm=webp&fit=crop&q=80&w=1200 1200w, https://images.unsplash.com/photo-1503951914875-452162b0f3f1?fm=webp&fit=crop&q=80&w=1600 1600w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
+
+    <!-- Favicon optimizado: 0.8 KB (antes 452 KB) -->
+    <link rel="icon" type="image/webp" href="/favicon_gold_blade.webp" />
+    <link rel="alternate icon" href="/favicon_gold_blade_1782364993074.jpg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gold & Blade Salon & Barbershop | Luxury Hair Styling & Precision Grooming" />
+    <meta property="og:description" content="Experience premium styling, custom fades, royal hot towel shaves, and luxury hair coloring at Gold & Blade. Book your appointment online." />
+    <meta property="og:image" content="/og_image_gold_blade.webp" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Gold & Blade Salon & Barbershop | Luxury Hair Styling & Precision Grooming" />
+    <meta property="twitter:description" content="Experience premium styling, custom fades, royal hot towel shaves, and luxury hair coloring at Gold & Blade. Book your appointment online." />
+    <meta property="twitter:image" content="/og_image_gold_blade.webp" />
+
+    <style>
+      /* ── Reset mínimo ── */
+      *, ::before, ::after { box-sizing: border-box }
+      html { scroll-behavior: smooth }
+      body { margin: 0; background: #000; color: #f9fafb; font-family: Inter, system-ui, -apple-system, sans-serif }
+      .font-mono { font-family: 'Space Grotesk', ui-monospace, monospace }
+
+      /* ── Skeleton loader: se ve mientras React carga ── */
+      /* Aparece solo si #root está vacío (antes del hidrate) */
+      #root:empty { display: flex; flex-direction: column; min-height: 100vh }
+
+      /* Barra de navegación skeleton */
+      #root:empty::before {
+        content: '';
+        display: block;
+        height: 64px;
+        background: #0a0a0a;
+        border-bottom: 1px solid #1a1a1a;
+        flex-shrink: 0;
+      }
+
+      /* Hero skeleton con el brillo dorado */
+      #root:empty::after {
+        content: '';
+        display: block;
+        flex: 1;
+        min-height: calc(100vh - 64px);
+        background:
+          radial-gradient(ellipse 60% 40% at 50% 50%, rgba(212,175,55,0.06) 0%, transparent 70%),
+          #000;
+        position: relative;
+        animation: pulse-gold 1.8s ease-in-out infinite;
+      }
+
+      @keyframes pulse-gold {
+        0%, 100% { opacity: 1 }
+        50%       { opacity: 0.7 }
+      }
+
+      /* En móvil el hero ocupa toda la pantalla */
+      @media (max-width: 768px) {
+        #root:empty::after { min-height: calc(100svh - 56px) }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

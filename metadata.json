@@ -1,0 +1,6 @@
+{
+  "name": "Gold & Blade Salon & Barbershop",
+  "description": "A premium, luxury, modern hair salon and barbershop website with live appointment booking, customized price estimators, and a powerful business admin panel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
